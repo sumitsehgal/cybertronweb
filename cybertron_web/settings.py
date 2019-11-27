@@ -84,17 +84,10 @@ WSGI_APPLICATION = 'cybertron_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< HEAD
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'OPTIONS': {
             'read_default_file': '/etc/mysql/my.cnf'
         }
-=======
-        'OPTIONS': {
-            # 'read_default_file': '/etc/mysql/my.cnf',
-            'read_default_file': os.path.join(BASE_DIR, 'my.cnf')
-        },
->>>>>>> 0504b3374be9de7066c7df267435cb6078ddd545
     }
 }
 
