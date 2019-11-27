@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'slider.apps.SliderConfig'
 ]
 
 MIDDLEWARE = [
@@ -73,13 +74,27 @@ WSGI_APPLICATION = 'cybertron_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'OPTIONS': {
             'read_default_file': '/etc/mysql/my.cnf'
         }
+=======
+        'OPTIONS': {
+            # 'read_default_file': '/etc/mysql/my.cnf',
+            'read_default_file': os.path.join(BASE_DIR, 'my.cnf')
+        },
+>>>>>>> 0504b3374be9de7066c7df267435cb6078ddd545
     }
 }
 
@@ -121,3 +136,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
