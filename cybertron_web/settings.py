@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'slider.apps.SliderConfig'
+    'slider.apps.SliderConfig',
+    'Services.apps.ServicesConfig',
+    'page.apps.PageConfig'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+MEDIA_URL = '/Images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Images')

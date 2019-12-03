@@ -15,8 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+# from django.contrib.admin.models import LogEntry
+from django.contrib.auth.models import User, Group
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('slider/', include('slider.urls'))
-]
+    path('', include('slider.urls')),
+    path('services', include('Services.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "Cybertron Technologies"
+admin.site.site_title = "Admin"
+admin.site.index_title = "Cybertron"
+
+# LogEntry.objects.all().delete()
+
+admin.site.unregister(User)
+admin.site.unregister(Group)
