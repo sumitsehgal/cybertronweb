@@ -1,0 +1,12 @@
+[Wed Dec 04 12:14:41.773770 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044] mod_wsgi (pid=1002): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 04 12:14:41.779865 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044] mod_wsgi (pid=1002): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 04 12:14:41.780196 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044] Traceback (most recent call last):
+[Wed Dec 04 12:14:41.782881 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>
+[Wed Dec 04 12:14:41.782912 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044]     from django.core.wsgi import get_wsgi_application
+[Wed Dec 04 12:14:41.782950 2019] [wsgi:error] [pid 1002:tid 140464433047296] [client 127.0.0.1:37044] ModuleNotFoundError: No module named 'django'
+[Wed Dec 04 12:14:42.047596 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046] mod_wsgi (pid=1003): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 04 12:14:42.047698 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046] mod_wsgi (pid=1003): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 04 12:14:42.048049 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046] Traceback (most recent call last):
+[Wed Dec 04 12:14:42.048121 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>
+[Wed Dec 04 12:14:42.048130 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046]     from django.core.wsgi import get_wsgi_application
+[Wed Dec 04 12:14:42.048150 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046] ModuleNotFoundError: No module named 'django'
