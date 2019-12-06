@@ -3,18 +3,31 @@ from django.utils import timezone
 
 
 class Skill(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, help_text="Change")
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='upload', null=True)
+
+    def __str__(self):
+        return self.title
 
 class Category(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='upload', null=True)
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
 class Image(models.Model):
     file = models.ImageField(upload_to='upload')
     position = models.PositiveSmallIntegerField(default=0)
+    
+    # def __str__(self):
+    #     return self.title
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
@@ -26,3 +39,6 @@ class Project(models.Model):
     skills = models.ManyToManyField(Skill)
     categories = models.ManyToManyField(Category)
     images = models.ManyToManyField(Image)
+
+    def __str__(self):
+        return self.title
