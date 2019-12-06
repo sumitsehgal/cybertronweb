@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'slider.apps.SliderConfig',
+    'portfolio.apps.PortfolioConfig',
     'Services.apps.ServicesConfig',
     'page.apps.PageConfig'
 ]
