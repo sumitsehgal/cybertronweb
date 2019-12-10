@@ -19,13 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 # from django.contrib.admin.models import LogEntry
 from django.contrib.auth.models import User, Group
+from . import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('slider.urls')),
+    path('slider/', include('slider.urls')),
     path('services', include('Services.urls')),
-    path('djrichtextfield/', include('djrichtextfield.urls'))
+    path('djrichtextfield/', include('djrichtextfield.urls')),
+    path('', views.index, name='index')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "Cybertron Technologies"

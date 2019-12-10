@@ -1,0 +1,455 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			{% block title %}
+			{{ page_title|default:"Cybertron Technologies" }}
+			{% endblock title %}
+		</title>
+		<link rel="stylesheet" href="{% static 'layout/style.css' %}" type="text/css">
+
+		<link href="{% static 'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' %}" rel="stylesheet" type="text/css">
+		<link href="{% static 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic' %}" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="{% static 'layout/js/jquery.js' %}"></script>
+
+		<!-- PrettyPhoto start -->
+		<link rel="stylesheet" href="{% static 'layout/plugins/prettyphoto/css/prettyPhoto.css' %}" type="text/css">
+		<script type="text/javascript" src="% static {'layout/plugins/prettyphoto/jquery.prettyPhoto.js'} %"></script>
+		<!-- PrettyPhoto end -->
+
+		<!-- jQuery tools start -->
+		<script type="text/javascript" src="{% static 'layout/plugins/tools/jquery.tools.min.js' %}"></script>
+		<!-- jQuery tools end -->
+
+		<!-- ScrollTo start -->
+		<script type="text/javascript" src="{% static 'layout/plugins/scrollto/jquery.scroll.to.min.js' %}"></script>
+		<!-- ScrollTo end -->
+
+		<!-- FlexSlider start -->
+		<link rel="stylesheet" href="{% static 'layout/plugins/flexslider/flexslider.css' %}" type="text/css"/>
+		<script type="text/javascript" src="{% static 'layout/plugins/flexslider/jquery.flexslider-min.js' %}"></script>
+		<!-- FlexSlider end -->
+
+		<!-- jQuery Form Plugin start -->
+		<script type="text/javascript" src="{% static 'layout/plugins/ajaxform/jquery.form.js' %}"></script>
+		<!-- jQuery Form Plugin end -->
+
+		<!-- Twitter Plugin start -->
+		<script charset="utf-8" src="{% static 'http://widgets.twimg.com/j/2/widget.js' %}"></script>
+		<script type="text/javascript" src="{% static 'layout/plugins/tweet/tweet.widget.js' %}"></script>
+		<!-- Twitter Plugin end -->
+
+		<!-- jQuery Sort Plugin start -->
+		<script type="text/javascript" src="{% static 'layout/plugins/sort/jquery.sort.min.js' %}"></script>
+		<!-- jQuery Sort Plugin end -->
+
+		<!-- Roundabout Plugin start -->
+		<script type="text/javascript" src="{% static 'layout/plugins/roundabout/jquery.roundabout.min.js' %}"></script>
+		<!-- Roundabout Plugin end -->
+
+		<!-- Nivo Slider Plugin start -->
+		<link rel="stylesheet" href="{% static 'layout/plugins/nivo/nivo-slider.css' %}" type="text/css">
+		<script type="text/javascript" src="{% static 'layout/plugins/nivo/jquery.nivo.slider.pack.js' %}"></script>
+		<!-- Nivo Slider Plugin end -->
+
+		<!-- OneByOne start -->
+		<link rel="stylesheet" href="{% static 'layout/plugins/onebyone/css/jquery.onebyone.css' %}" type="text/css"/>
+		<link rel="stylesheet" href="{% static 'layout/plugins/onebyone/css/animate.css' %}" type="text/css"/>
+		<script type="text/javascript" src="{% static 'layout/plugins/onebyone/jquery.onebyone.min.js' %}"></script>
+		<!-- OneByOne end -->
+
+		<script type="text/javascript" src="{% static 'layout/js/main.js' %}"></script>
+			</head>
+
+
+<body class="theme_layout_wide theme_light theme_footer_normal theme_color_blue">
+	<div class="wrapper sticky_footer">
+		<!-- HEADER BEGIN -->
+		<header>
+			<div id="header">
+				<section class="section_top">
+					<div class="inner">
+						<div id="logo"><a href="index.html"><img src="{% static 'images/logo1.png' %}" alt="SkyDream" title="SkyDream"></a></div>
+						
+						<nav class="main_menu">
+							<ul>
+								<li class="current_page_item"><a href="index.html">Home</a></li>
+								<li><a href="portfolio.html">Our Projects</a></li>
+								<li><a href="about.html">About Us</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul>
+						</nav>
+						
+						<div class="clearboth"></div>
+					</div>
+				</section>
+				
+				<section class="section_slider_1">
+					<div class="slider_line_1"></div>
+					<div class="slider_line_2"></div>
+					
+					<div id="slider" class="slider">
+						<div class="oneByOne_item">
+							<img src="{% static 'slider/pic_slider_2.png' %}"  alt="" class="pic_1_1" data-ease-type="bounceInRight">
+							<img src="{% static 'slider/pic_slider_2_2.png' %}" alt="" class="pic_1_2" data-ease-type="bounceInRight">
+							<img src="{% static 'slider/pic_slider_1_3.png' %}" alt="" class="pic_1_3" data-ease-type="bounceInRight">
+							<div class="text_3_1" data-ease-type="fadeInLeft">All platforms covered</div>
+							<div class="text_3_2" data-ease-type="fadeInLeft">Websites and Apps</div>
+							<div class="text_3_3" data-ease-type="fadeInLeft">Desktop, Tablets, Smartphones</div>
+							<!--<div class="text_1_3" data-ease-type="fadeInUp">template is created in the minimalist “clean” style. With a powerful admin and flexible options.</div>-->
+						</div>
+                        <div class="oneByOne_item">
+							<img src="{% static 'slider/pic_slider_3.png' %}" alt="" class="pic_3_1" data-ease-type="bounceInDown">
+							<img src="{% static 'slider/pic_slider_3_2.png' %}" alt="" class="pic_3_2" data-ease-type="bounceInDown">
+							<img src="{% static 'slider/pic_slider_3_3.png' %}" alt="" class="pic_3_3" data-ease-type="bounceInDown">
+							<div class="text_3_1" data-ease-type="fadeInLeft">Responsive Websites</div>
+							<div class="text_3_2" data-ease-type="fadeInLeft">which look great on all devices</div>
+							<div class="text_3_3" data-ease-type="fadeInLeft">Desktops, tablets and mobile phones.</div>
+							<!--<div class="text_3_4" data-ease-type="fadeInLeft">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</div>
+							<div class="text_3_5" data-ease-type="fadeInLeft"><a href="#" class="general_button big arrow_right"><span>Read More</span></a></div>-->
+						</div>
+						
+				<!--		<div class="oneByOne_item">
+							<img src="slider/pic_slider_2.png"  alt="" class="pic_1_1" data-ease-type="bounceInRight">
+							<img src="slider/pic_slider_2_2.png" alt="" class="pic_1_2" data-ease-type="bounceInRight">
+							<img src="slider/pic_slider_1_3.png" alt="" class="pic_1_3" data-ease-type="bounceInRight">
+							<div class="text_1_1" data-ease-type="fadeInUp">Cybertron Technologies</div>
+							<div class="text_1_2" data-ease-type="fadeInUp">Best Choice of For Business</div>
+							<div class="text_1_3" data-ease-type="fadeInUp">Offer Web and Mobile Solutions.</div>
+						</div>
+					-->	
+						
+						
+						<!--<div class="oneByOne_item">
+							<div class="video_4_1" data-ease-type="fadeIn"><iframe src="http://player.vimeo.com/video/36778012?badge=0" width="512" height="288" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+							<div class="text_4_1" data-ease-type="fadeInLeft">video present your</div>
+							<div class="text_4_2" data-ease-type="fadeInLeft"><b>Product</b> and <b>services</b></div>
+							<div class="text_4_3" data-ease-type="fadeInLeft">Play YouTube and Vimeo Videos</div>
+							<div class="text_4_4" data-ease-type="fadeInLeft">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</div>
+							<div class="text_4_5" data-ease-type="fadeInLeft"><a href="#" class="general_button big arrow_right"><span>Read More</span></a></div>
+						</div>-->
+					</div>
+					
+					<div class="static_pic"><img src="{% static 'images/pic_slider_1_static.jpg' %}" alt=""></div>
+					
+					<script type="text/javascript">
+						$(function() {
+							$('#slider').oneByOne({
+								width : 2000,
+								className : 'oneByOne1',	             
+								easeType : 'bounceInRight',
+								slideShow : false,
+								showArrow : true,
+								showButton : false
+							});
+						});
+					</script>
+				</section>
+			</div>
+		</header>
+		<!-- HEADER END -->
+		
+		<!-- CONTENT BEGIN -->
+		<div id="content" class="">
+			<div class="inner">
+				<div class="general_content">
+					<div class="main_content">
+						<!--<div class="block_slogan_1">
+							<p class="text_1">Looking for a professional and unique responsive design?</p>
+							<p class="text_2">The Sky Dream is a simple and clean responsive template suitable for companies wishing to increase the profile of their web presence, it’s created by using the latest HTML5 and CSS3 techniques.</p>
+						</div>-->
+						<div class="line_2" style="margin:0px 0px 37px;"></div>
+						
+						<div class="block_services_type_1">
+							<div class="service">
+								<div class="icon"><img src="{% static 'images/icon_services_1_1.png' %}" alt=""></div>
+								<div class="title">
+									<h5 style="padding-top:6px">Creative &amp; Clean Design</h5>
+									<!--<p>SUBHEAD GOES HERE</p>-->
+								</div>
+								<div class="clearboth"></div>
+								<div class="text">
+									<p>We provide affordable custom website design which sharply reflects your business and still fits in your budget.</p>
+									<a href="services.html" class="general_button fr">Read More</a>
+								</div>
+							</div>
+							
+							<div class="service">
+								<div class="icon"><img src="{% static 'images/icon_services_1_1.png' %}" alt=""></div>
+								<div class="title">
+									<h5 style="padding-top:6px">Web Development</h5>
+									<!--<p>SUBHEAD GOES HERE</p>-->
+								</div>
+								<div class="clearboth"></div>
+								<div class="text">
+									<p>Our team uses latest technologies and industry trends to develop your websites in order to give you the best solutions.</p>
+									<a href="services.html" class="general_button fr">Read More</a>
+								</div>
+							</div>
+							
+							<div class="service">
+								<div class="icon"><img src="{% static 'images/icon_services_1_2.png' %}" alt=""></div>
+								<div class="title">
+									<h5 style="padding-top:6px">Mobile Apps Development</h5>
+									<!--<p>SUBHEAD GOES HERE</p>-->
+								</div>
+								<div class="clearboth"></div>
+								<div class="text">
+									<p>We offer development in leading Cross Platform frameworks like PhoneGap, jQuery Mobile, Titanium Appcelerator.</p>
+									<a href="services.html" class="general_button fr">Read More</a>
+								</div>
+							</div>
+							
+							<div class="clearboth"></div>
+						</div>
+						
+						<div class="line_2" style="margin:37px 0px 35px;"></div>
+						
+						<div class="block_latest_projects_2">
+							<h4>Latest Projects</h4>
+							
+							<div class="project">
+								<div class="image">
+									<img src="{% static 'portfolio_images/kings.jpg' %}" alt="">
+									<div class="info">
+										<div class="icons">
+											<ul>
+												<li><a href="{% static 'portfolio_images/kings_big.jpg' %}" data-rel="prettyPhoto" class="icon_zoom" title="">Zoom</a></li>
+												<li><a href="http://kimt.edu.au/" target="_new" class="icon_link">Link</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<div class="description">
+									<h6><a href="http://kimt.edu.au/">King's Institute of Management &amp; Technology</a></h6>
+									<p class="tags">Web Design &amp; Devlopment</p>
+								</div>
+								
+								<div class="line_2"></div>
+							</div>
+							
+							<div class="project">
+								<div class="image">
+									<img src="{% static 'portfolio_images/lana.jpg' %}" alt="">
+									<div class="info">
+										<div class="icons">
+											<ul>
+												<li><a href="{% static 'portfolio_images/lana_big.jpg' %}" data-rel="prettyPhoto" class="icon_zoom" title="">Zoom</a></li>
+												<li><a href="http://lanasmithhaletherapy.com/" target="_new" class="icon_link">Link</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<div class="description">
+									<h6><a href="http://lanasmithhaletherapy.com/">Lana Smith Hale Therapy</a></h6>
+									<p class="tags">Web Design &amp; Devlopment</p>
+
+								</div>
+								
+								<div class="line_2"></div>
+							</div>
+							
+							<div class="project">
+								<div class="image">
+									<img src="{% static 'portfolio_images/heels.jpg' %}" alt="">
+									<div class="info">
+										<div class="icons">
+											<ul>
+												<li><a href="{% static 'portfolio_images/heels_big.jpg' %}" data-rel="prettyPhoto" class="icon_zoom" title="">Zoom</a></li>
+												<li><a href="http://www.heelsabove.com/" target="_new" class="icon_link">Link</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<div class="description">
+									<h6><a href="http://www.heelsabove.com/">Heels Above</a></h6>
+									<p class="tags">Web Design &amp; Devlopment</p>
+								</div>
+								
+								<div class="line_2"></div>
+							</div>
+							
+							<div class="clearboth"></div>
+						</div>
+						
+						<div class="block_text_promo_1">
+							<p class="text_1">We'd love to talk to you!</p>
+							<p class="text_2">Contact us by phone or email to get free quote.</p>
+							<div class="button"><a href="contact.html" class="general_button big"><span>GET A FREE QUOTE NOW</span></a></div>
+						</div>
+						<div class="block_our_clients">
+							<h4>Our Clients</h4>
+							<div class="client"><a href="#"><img src="{% static 'portfolio_images/client_disney.png' %}" alt=""></a></div>
+							<div class="client"><a href="#"><img src="{% static 'portfolio_images/client_philips.png' %}" alt=""></a></div>
+							<div class="client"><a href="#"><img src="{% static 'portfolio_images/client_aol.png' %}" alt=""></a></div>
+							<div class="client"><a href="#"><img src="{% static 'portfolio_images/client_mit.png' %}" alt=""></a></div>
+							<div class="client"><a href="#"><img src="{% static 'portfolio_images/client_pace.png' %}" alt=""></a></div>
+						</div>
+						
+						<div class="separator" style="height:17px;"></div>
+						
+						<div class="block_main_testimonials">
+							<h4>Testimonials</h4>
+							
+							<div class="one_half">
+								<div class="block_testimonials_2">
+									<div class="content">
+										<div class="text">
+											<p>“ Hard working people. Great communication, work on time. Very Good! Will hire in future for sure!”</p>
+											
+											<div class="tail"></div>
+										</div>
+										
+										<div class="author"><p><a href="https://www.kimt.edu.au">Narinder Gill,</a><span class="position"> kimt.edu.au</span></p></div>
+									</div>
+									<div class="clearboth"></div>
+								</div>
+							</div>
+							
+							<div class="one_half last">
+								<div class="block_testimonials_2">
+									<div class="content">
+										<div class="text">
+											<p>“ The team at Cybertron is very skilled and offers great support. I would definitely work with them again. I would also highly recommend them. Thank you for everything.”</p>
+											
+											<div class="tail"></div>
+										</div>
+										
+										<div class="author"><p><a href="https://www.waitsup.com/">Dhiraj Thareja,</a><span class="position"> Waitsup.com</span></p></div>
+									</div>
+									<div class="clearboth"></div>
+								</div>
+							</div>
+							
+							<div class="clearboth"></div>
+						</div>
+						
+					</div>
+					
+					<div class="clearboth"></div>
+				</div>
+			</div>
+		</div>
+		<!-- CONTENT END -->
+		
+		<!-- FOOTER BEGIN -->
+		<footer>
+			<div id="footer">
+				<section class="section_top">
+					<div class="inner">
+						<div class="block_to_top">
+							<a href="#">BACK TO TOP</a>
+						</div>
+						
+						<div class="block_footer_widgets">
+							<div class="column" style="width:230px;">
+								<h3>Contact</h3>
+								
+								<div class="block_footer_about">
+									<p>Address: SCF 39 TF, Phase 3B2, Mohali, India.</p>
+									<p>Telephone: +91 172 4617467</p>
+                                    <p>Sales: <a href="mailto:sales@cybertrontechnologies.com?Subject=Sale Enquiry">sales@cybertrontechnologies.com</a></p>
+                                    <p>Careers: <a href="mailto:jobs@cybertrontechnologies.com?Subject=Job Enquiry">jobs@cybertrontechnologies.com</a></p>
+									<!--<p>Fax: +8 589 541 26 32</p>-->
+								</div>
+								
+								<div class="block_footer_social_1">
+									<ul>
+										<li><a href="https://www.facebook.com/pages/Cybertron-Technoloiges/190298147804738" class="facebook">Facebook</a></li>
+										<!--<li><a href="#" class="pinterest">Pinterest</a></li>
+										<li><a href="#" class="vimeo">Vimeo</a></li>
+										<li><a href="#" class="rss">RSS</a></li>
+										<li><a href="#" class="flickr">Flickr</a></li>-->
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div class="column">
+								<h3>Customer Testimonials</h3>
+								
+								<div class="block_footer_recent_posts">
+									<ul>
+										<li><a href="testimonials.html">Hard working people. Great...</a></li>
+										<li><a href="testimonials.html">The team at Cybertron is very...</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							<div class="column" style="width:100px;">
+								<h3>Profiles</h3>
+								
+								<div class="block_footer_recent_posts">
+									<ul>
+										<li style="border-bottom:none;"><a href="https://www.odesk.com/companies/~~9b86ae1ebef80e5a">Odesk.com</a></li>
+										<li style="border-bottom:none;"><a href="http://www.guru.com/freelancers/Web-Developer-Website-Designer/India/Chandigarh/690744">Guru.com</a></li>
+										<!--<li style="border-bottom:none;"><a href="services.html">Custom Web Design.</a></li>
+										<li style="border-bottom:none;"><a href="services.html">Complete Web Solutions.</a></li>-->
+									</ul>
+								</div>
+							</div>
+							
+							<div class="column">
+								<h3>Esteemed Clients</h3>
+								
+								<div class="block_flickr_footer">
+                                	<ul>
+										<li><img src="{% static 'portfolio_images/client_1.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_2.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_3.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_4.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_5.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_6.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_7.png' %}" alt=""></li>
+										<li><img src="{% static 'portfolio_images/client_8.png' %}" alt=""></li>
+									</ul>
+								</div>
+                            </div>
+							
+							<div class="clearboth"></div>
+						</div>
+					</div>
+				</section>
+				
+				<section class="section_bottom">
+					<div class="inner">
+						<div class="block_bottom_menu">
+							<ul>
+								<li><a href="https://basecamp.com/2263077">Client Login</a></li>
+							</ul>
+						</div>
+						
+						<div class="block_copyrights"><p>&copy; 2013 Cybertron Technologies All rights reserved.</p></div>
+						
+						<div class="clearboth"></div>
+					</div>
+				</section>
+			</div>
+		</footer>
+		<!-- FOOTER END -->
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-179765-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+</html>

@@ -154,3 +154,7 @@ DJRICHTEXTFIELD_CONFIG = {
 'width': 700
 }
 }
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'cybertron_web/static')
+]
