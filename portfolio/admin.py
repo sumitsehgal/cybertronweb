@@ -3,11 +3,11 @@ from .models import Project, Category, Skill, Image
 from django.template.defaultfilters import truncatechars
 from django.utils.safestring import mark_safe
 import os  
-from django import forms
+# from django import forms
 from .models import ProjectForm
 # Register your models here.
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class CategoryAdmin(admin.ModelAdmin):
     fields = ('title', 'description', 'thumbnail', 'preview')
@@ -23,9 +23,9 @@ class ImageAdmin(admin.ModelAdmin):                     # This would not show th
     get_model_perms = lambda self, request: {}          # be Edited from the Projects Objects.
 admin.site.register(Image, ImageAdmin)
 
-class ImageInline(admin.StackedInline):
-    model = Image
-    extra = 0
+# class ImageInline(admin.StackedInline):
+#     model = Image
+#     extra = 0
 
 class ProjectAdmin(admin.ModelAdmin):
 

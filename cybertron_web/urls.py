@@ -24,7 +24,8 @@ from django.contrib.auth.models import User, Group
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('slider.urls')),
-    path('services', include('Services.urls'))
+    path('services', include('Services.urls')),
+    path('djrichtextfield/', include('djrichtextfield.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "Cybertron Technologies"
