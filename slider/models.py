@@ -17,6 +17,8 @@ class Slider(models.Model):
     Text_2 = models.CharField(max_length=100)
     Text_3 = models.CharField(max_length=100)
 
+    # Animation = models.CharField(max_length=100)
+
     def __str__(self):
         return self.Title
 

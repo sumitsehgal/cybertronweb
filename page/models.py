@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from djrichtextfield.models import RichTextField
+from django import forms
 
 # Create your models here.
 
@@ -13,7 +14,7 @@ class Page(models.Model):
     Service = models.ManyToManyField(Services)
     Slider = models.ManyToManyField(Slider)
     Content = RichTextField()
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.Title)
@@ -21,3 +22,6 @@ class Page(models.Model):
 
     def __str__(self):
         return self.Title
+
+class PageForm(forms.ModelForm):
+    pass

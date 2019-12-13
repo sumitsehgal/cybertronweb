@@ -6,7 +6,7 @@
 
 
 <fieldset class="module">
-<h2>Upload Photos</h2>
+<h2>Upload Images</h2>
 <input name="photos_multiple" type="file" multiple />
 </fieldset>
 
@@ -17,14 +17,15 @@
     <input type="hidden" name="files[]" value="{{img.id}}">
     
     <button onclick=remove_img(id) type=button id={{img.id}}>Delete</button>
-    <script> 
+    
+</li>
+
+<script> 
     function remove_img(id) {
             var elem = document.getElementById(id);
             console.log(id);
             elem.parentNode.remove(elem);
         }
-    </script>
-</li>
-
+</script>
 {% endfor %}
 {% endblock %}

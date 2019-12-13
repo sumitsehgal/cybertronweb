@@ -1,0 +1,76 @@
+
+{% extends "admin/change_form.html" %}
+{% load static %}
+{% block inline_field_sets %}
+{% for inline_admin_formset in inline_admin_formsets %}
+{% include inline_admin_formset.opts.template %}
+<script type="text/javascript" src="{% static 'layout/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'layout/plugins/tools/jquery.tools.min.js' %}"></script>
+{% endfor %}
+
+{% endblock %}
+{% comment %}
+
+<fieldset class="module">
+    <h2>Upload Slider Images</h2>
+    
+    <div id="Slider_Info">
+        <label for="title">Title</label>
+        <input name="title[]" type="text"/>
+
+        <input name="img_lg[]" type="file" single />
+        <input name="img_md[]" type="file" single />
+        <input name="img_sm[]" type="file" single />
+    
+        <label for="text_1">Text1</label>
+        <input name="text_1[]" type="text"/>
+        <label for="text_2">Text2</label>
+        <input name="text_2[]" type="text"/>
+        <label for="text_3">Text3</label>
+        <input name="text_3[]" type="text"/>
+    </div>
+</fieldset>
+
+<table style="width:40%">
+    <tr>
+        <th>Title</th>
+        <th>Large Image</th>
+        <th>Medium Image</th>
+        <th>Small Image</th>
+        <th>Text 1</th>
+        <th>Text 2</th>
+        <th>Text 3</th>
+    </tr>
+</table>
+{% if original.Slider %}
+    {% for slider in original.Slider.all %}
+    {{slider.Title}}
+    <img src="/Images/{{ slider.Image_Large }}" width="100" height="100"  />
+    <img src="/Images/{{ slider.Image_Medium }}" width="100" height="100"  />
+    <img src="/Images/{{ slider.Image_Small }}" width="100" height="100"  />
+    {{slider.Text_1}}
+    {{slider.Text_2}}
+    {{slider.Text_3}}
+    <br>
+    {{img.Image_Large}}
+    {% endfor %}
+{% else %}
+        <p>Nothing</p>
+{% endif %}
+
+<br>
+<button onclick=fn() type=button >Add</button>
+        <script> 
+            function fn() {
+                var div = document.getElementById("Slider_Info")
+                console.log(div)
+                clone = div.cloneNode(true);
+                clone.id = "Cloned Div";
+                div.parentNode.appendChild(clone).find("input").value("")
+                console.log("Done!")
+            }
+        </script>
+
+
+
+{% endcomment %}

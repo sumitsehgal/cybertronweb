@@ -10,3 +10,45 @@
 [Wed Dec 04 12:14:42.048121 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>
 [Wed Dec 04 12:14:42.048130 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046]     from django.core.wsgi import get_wsgi_application
 [Wed Dec 04 12:14:42.048150 2019] [wsgi:error] [pid 1003:tid 140464458225408] [client 127.0.0.1:37046] ModuleNotFoundError: No module named 'django'
+[Wed Dec 11 13:24:54.111696 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550] mod_wsgi (pid=982): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 11 13:24:54.115913 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550] mod_wsgi (pid=982): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 11 13:24:54.116316 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550] Traceback (most recent call last):
+[Wed Dec 11 13:24:54.116358 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>
+[Wed Dec 11 13:24:54.116382 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550]     from django.core.wsgi import get_wsgi_application
+[Wed Dec 11 13:24:54.116396 2019] [wsgi:error] [pid 982:tid 140058682193664] [client ::1:50550] ModuleNotFoundError: No module named 'django'
+[Wed Dec 11 13:24:54.259484 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552] mod_wsgi (pid=981): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:24:54.259598 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552] mod_wsgi (pid=981): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:24:54.260113 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552] Traceback (most recent call last):, referer: http://localhost/
+[Wed Dec 11 13:24:54.260142 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>, referer: http://localhost/
+[Wed Dec 11 13:24:54.260149 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552]     from django.core.wsgi import get_wsgi_application, referer: http://localhost/
+[Wed Dec 11 13:24:54.260173 2019] [wsgi:error] [pid 981:tid 140058682193664] [client ::1:50552] ModuleNotFoundError: No module named 'django', referer: http://localhost/
+[Wed Dec 11 13:38:44.297962 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678] mod_wsgi (pid=981): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:44.298779 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678] mod_wsgi (pid=981): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:44.298998 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678] Traceback (most recent call last):, referer: http://localhost/
+[Wed Dec 11 13:38:44.299039 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>, referer: http://localhost/
+[Wed Dec 11 13:38:44.299045 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678]     from django.core.wsgi import get_wsgi_application, referer: http://localhost/
+[Wed Dec 11 13:38:44.299064 2019] [wsgi:error] [pid 981:tid 140058665408256] [client ::1:50678] ModuleNotFoundError: No module named 'django', referer: http://localhost/
+[Wed Dec 11 13:38:55.673366 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682] mod_wsgi (pid=981): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 11 13:38:55.673427 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682] mod_wsgi (pid=981): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'.
+[Wed Dec 11 13:38:55.673524 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682] Traceback (most recent call last):
+[Wed Dec 11 13:38:55.673558 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>
+[Wed Dec 11 13:38:55.673563 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682]     from django.core.wsgi import get_wsgi_application
+[Wed Dec 11 13:38:55.673576 2019] [wsgi:error] [pid 981:tid 140058657015552] [client ::1:50682] ModuleNotFoundError: No module named 'django'
+[Wed Dec 11 13:38:55.714753 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684] mod_wsgi (pid=981): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:55.714816 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684] mod_wsgi (pid=981): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:55.714885 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684] Traceback (most recent call last):, referer: http://localhost/
+[Wed Dec 11 13:38:55.714936 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>, referer: http://localhost/
+[Wed Dec 11 13:38:55.714941 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684]     from django.core.wsgi import get_wsgi_application, referer: http://localhost/
+[Wed Dec 11 13:38:55.714956 2019] [wsgi:error] [pid 981:tid 140058648622848] [client ::1:50684] ModuleNotFoundError: No module named 'django', referer: http://localhost/
+[Wed Dec 11 13:38:59.081097 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686] mod_wsgi (pid=981): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:59.081209 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686] mod_wsgi (pid=981): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 13:38:59.081313 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686] Traceback (most recent call last):, referer: http://localhost/
+[Wed Dec 11 13:38:59.081344 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>, referer: http://localhost/
+[Wed Dec 11 13:38:59.081349 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686]     from django.core.wsgi import get_wsgi_application, referer: http://localhost/
+[Wed Dec 11 13:38:59.081394 2019] [wsgi:error] [pid 981:tid 140058539583232] [client ::1:50686] ModuleNotFoundError: No module named 'django', referer: http://localhost/
+[Wed Dec 11 16:29:34.452030 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148] mod_wsgi (pid=890): Failed to exec Python script file '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 16:29:34.453732 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148] mod_wsgi (pid=890): Exception occurred processing WSGI script '/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py'., referer: http://localhost/
+[Wed Dec 11 16:29:34.454166 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148] Traceback (most recent call last):, referer: http://localhost/
+[Wed Dec 11 16:29:34.454261 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148]   File "/home/pranshu/Desktop/cybertronweb/cybertron_web/wsgi.py", line 12, in <module>, referer: http://localhost/
+[Wed Dec 11 16:29:34.454269 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148]     from django.core.wsgi import get_wsgi_application, referer: http://localhost/
+[Wed Dec 11 16:29:34.454284 2019] [wsgi:error] [pid 890:tid 139697092593408] [client ::1:59148] ModuleNotFoundError: No module named 'django', referer: http://localhost/

@@ -54,13 +54,14 @@ class ProjectAdmin(admin.ModelAdmin):
         image_ids = request.POST.getlist("files[]")
         print(image_ids)
         obj.images.filter(project_id=obj.id).exclude(id__in=image_ids).delete()
-        super(ProjectAdmin,self).save_model(request, obj, form, change)
+        super(ProjectAdmin, self).save_model(request, obj, form, change)
 
+        print(request.FILES)
         for afile in request.FILES.getlist('photos_multiple'):
-            # print('-----------------------------')
+            print('-----------------------------')
             print(afile)
-            # print('-----------------------------')
-            obj.images.create(file=afile)
+            print('-----------------------------')
+            # obj.images.create(file=afile)
 
     # def image_preview(self, obj):
     #     images = ""

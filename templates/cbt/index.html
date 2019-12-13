@@ -18,7 +18,7 @@
 
 		<!-- PrettyPhoto start -->
 		<link rel="stylesheet" href="{% static 'layout/plugins/prettyphoto/css/prettyPhoto.css' %}" type="text/css">
-		<script type="text/javascript" src="% static {'layout/plugins/prettyphoto/jquery.prettyPhoto.js'} %"></script>
+		<script type="text/javascript" src="{% static 'layout/plugins/prettyphoto/jquery.prettyPhoto.js' %} "></script>
 		<!-- PrettyPhoto end -->
 
 		<!-- jQuery tools start -->
@@ -39,7 +39,8 @@
 		<!-- jQuery Form Plugin end -->
 
 		<!-- Twitter Plugin start -->
-		<script charset="utf-8" src="{% static 'http://widgets.twimg.com/j/2/widget.js' %}"></script>
+		
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 		<script type="text/javascript" src="{% static 'layout/plugins/tweet/tweet.widget.js' %}"></script>
 		<!-- Twitter Plugin end -->
 
@@ -92,27 +93,35 @@
 				<section class="section_slider_1">
 					<div class="slider_line_1"></div>
 					<div class="slider_line_2"></div>
-					
+
+					{% if a %}
+						{% for obj in a %}
+							{% for slider in obj.Slider.all %}
+								{% if forloop.counter0|divisibleby:2 %}								
 					<div id="slider" class="slider">
 						<div class="oneByOne_item">
-							<img src="{% static 'slider/pic_slider_2.png' %}"  alt="" class="pic_1_1" data-ease-type="bounceInRight">
-							<img src="{% static 'slider/pic_slider_2_2.png' %}" alt="" class="pic_1_2" data-ease-type="bounceInRight">
-							<img src="{% static 'slider/pic_slider_1_3.png' %}" alt="" class="pic_1_3" data-ease-type="bounceInRight">
-							<div class="text_3_1" data-ease-type="fadeInLeft">All platforms covered</div>
-							<div class="text_3_2" data-ease-type="fadeInLeft">Websites and Apps</div>
-							<div class="text_3_3" data-ease-type="fadeInLeft">Desktop, Tablets, Smartphones</div>
-							<!--<div class="text_1_3" data-ease-type="fadeInUp">template is created in the minimalist “clean” style. With a powerful admin and flexible options.</div>-->
+							<img src=/Images/{{slider.Image_Large}}  alt="" class="pic_1_1">
+							<img src=/Images/{{slider.Image_Medium}} alt="" class="pic_1_2">
+							<img src=/Images/{{slider.Image_Small}} alt="" class="pic_1_3">
+							<div class="text_3_1" data-ease-type="fadeInLeft">{{slider.Text_1}}</div>
+							<div class="text_3_2" data-ease-type="fadeInLeft">{{slider.Text_2}}</div>
+							<div class="text_3_3" data-ease-type="fadeInLeft">{{slider.Text_3}}</div>
 						</div>
+								{% else %}
                         <div class="oneByOne_item">
-							<img src="{% static 'slider/pic_slider_3.png' %}" alt="" class="pic_3_1" data-ease-type="bounceInDown">
-							<img src="{% static 'slider/pic_slider_3_2.png' %}" alt="" class="pic_3_2" data-ease-type="bounceInDown">
-							<img src="{% static 'slider/pic_slider_3_3.png' %}" alt="" class="pic_3_3" data-ease-type="bounceInDown">
-							<div class="text_3_1" data-ease-type="fadeInLeft">Responsive Websites</div>
-							<div class="text_3_2" data-ease-type="fadeInLeft">which look great on all devices</div>
-							<div class="text_3_3" data-ease-type="fadeInLeft">Desktops, tablets and mobile phones.</div>
-							<!--<div class="text_3_4" data-ease-type="fadeInLeft">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</div>
-							<div class="text_3_5" data-ease-type="fadeInLeft"><a href="#" class="general_button big arrow_right"><span>Read More</span></a></div>-->
+							<img src=/Images/{{slider.Image_Large}}  alt="" class="pic_1_1">
+							<img src=/Images/{{slider.Image_Medium}} alt="" class="pic_1_2">
+							<img src=/Images/{{slider.Image_Small}} alt="" class="pic_1_3">
+							<div class="text_3_1" data-ease-type="fadeInLeft">{{slider.Text_1}}</div>
+							<div class="text_3_2" data-ease-type="fadeInLeft">{{slider.Text_2}}</div>
+							<div class="text_3_3" data-ease-type="fadeInLeft">{{slider.Text_3}}</div>
 						</div>
+							{% endif %}
+							{% endfor %}
+						{% endfor %}
+						{% else %}
+						<p>Nothing to Show</p>
+					{% endif %}
 						
 				<!--		<div class="oneByOne_item">
 							<img src="slider/pic_slider_2.png"  alt="" class="pic_1_1" data-ease-type="bounceInRight">
@@ -143,7 +152,7 @@
 								width : 2000,
 								className : 'oneByOne1',	             
 								easeType : 'bounceInRight',
-								slideShow : false,
+								slideShow : true,
 								showArrow : true,
 								showButton : false
 							});
@@ -166,45 +175,32 @@
 						<div class="line_2" style="margin:0px 0px 37px;"></div>
 						
 						<div class="block_services_type_1">
+
+								{% if a %}
+									{% for obj in a %}
+										{% for service in obj.Service.all %}
+											{% if service %}
+												{% if forloop.counter < 4 %}
 							<div class="service">
-								<div class="icon"><img src="{% static 'images/icon_services_1_1.png' %}" alt=""></div>
+								<div class="icon"><img src=/Images/{{service.Icon}} height="31" width="30" alt=""></div>
 								<div class="title">
-									<h5 style="padding-top:6px">Creative &amp; Clean Design</h5>
+									<h5 style="padding-top:6px">{{service.Title}}</h5>
 									<!--<p>SUBHEAD GOES HERE</p>-->
 								</div>
 								<div class="clearboth"></div>
 								<div class="text">
-									<p>We provide affordable custom website design which sharply reflects your business and still fits in your budget.</p>
+									<p>{{service.Main_Text}}</p>
 									<a href="services.html" class="general_button fr">Read More</a>
 								</div>
 							</div>
-							
-							<div class="service">
-								<div class="icon"><img src="{% static 'images/icon_services_1_1.png' %}" alt=""></div>
-								<div class="title">
-									<h5 style="padding-top:6px">Web Development</h5>
-									<!--<p>SUBHEAD GOES HERE</p>-->
-								</div>
-								<div class="clearboth"></div>
-								<div class="text">
-									<p>Our team uses latest technologies and industry trends to develop your websites in order to give you the best solutions.</p>
-									<a href="services.html" class="general_button fr">Read More</a>
-								</div>
-							</div>
-							
-							<div class="service">
-								<div class="icon"><img src="{% static 'images/icon_services_1_2.png' %}" alt=""></div>
-								<div class="title">
-									<h5 style="padding-top:6px">Mobile Apps Development</h5>
-									<!--<p>SUBHEAD GOES HERE</p>-->
-								</div>
-								<div class="clearboth"></div>
-								<div class="text">
-									<p>We offer development in leading Cross Platform frameworks like PhoneGap, jQuery Mobile, Titanium Appcelerator.</p>
-									<a href="services.html" class="general_button fr">Read More</a>
-								</div>
-							</div>
-							
+							{% else %}
+								{% endif %}
+							{% else %}
+								<p>Nothing to Display!</p>
+							{% endif %}
+							{% endfor %}
+							{% endfor %}
+							{% endif %}
 							<div class="clearboth"></div>
 						</div>
 						
@@ -212,10 +208,11 @@
 						
 						<div class="block_latest_projects_2">
 							<h4>Latest Projects</h4>
-							
+							{% if p %}
+								{% for obj in p %}
 							<div class="project">
 								<div class="image">
-									<img src="{% static 'portfolio_images/kings.jpg' %}" alt="">
+									<img src=/Images/{{obj.thumbnail}} alt="">
 									<div class="info">
 										<div class="icons">
 											<ul>
@@ -227,56 +224,14 @@
 								</div>
 								
 								<div class="description">
-									<h6><a href="http://kimt.edu.au/">King's Institute of Management &amp; Technology</a></h6>
-									<p class="tags">Web Design &amp; Devlopment</p>
+									<h6><a href={{obj.link}}>{{obj.title}}</a></h6>
+									<p class="tags">{{obj.description}}</p>
 								</div>
 								
 								<div class="line_2"></div>
 							</div>
-							
-							<div class="project">
-								<div class="image">
-									<img src="{% static 'portfolio_images/lana.jpg' %}" alt="">
-									<div class="info">
-										<div class="icons">
-											<ul>
-												<li><a href="{% static 'portfolio_images/lana_big.jpg' %}" data-rel="prettyPhoto" class="icon_zoom" title="">Zoom</a></li>
-												<li><a href="http://lanasmithhaletherapy.com/" target="_new" class="icon_link">Link</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								
-								<div class="description">
-									<h6><a href="http://lanasmithhaletherapy.com/">Lana Smith Hale Therapy</a></h6>
-									<p class="tags">Web Design &amp; Devlopment</p>
-
-								</div>
-								
-								<div class="line_2"></div>
-							</div>
-							
-							<div class="project">
-								<div class="image">
-									<img src="{% static 'portfolio_images/heels.jpg' %}" alt="">
-									<div class="info">
-										<div class="icons">
-											<ul>
-												<li><a href="{% static 'portfolio_images/heels_big.jpg' %}" data-rel="prettyPhoto" class="icon_zoom" title="">Zoom</a></li>
-												<li><a href="http://www.heelsabove.com/" target="_new" class="icon_link">Link</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								
-								<div class="description">
-									<h6><a href="http://www.heelsabove.com/">Heels Above</a></h6>
-									<p class="tags">Web Design &amp; Devlopment</p>
-								</div>
-								
-								<div class="line_2"></div>
-							</div>
-							
+								{% endfor %}
+							{% endif %}
 							<div class="clearboth"></div>
 						</div>
 						
